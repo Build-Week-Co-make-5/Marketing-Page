@@ -124,6 +124,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  text-decoration: none;
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -155,4 +158,30 @@ header nav .nav-container {
   display: flex;
   min-width: 30%;
   justify-content: space-between;
+}
+header .welcome-message {
+  margin-top: 150px;
+  text-align: center;
+  color: #fff;
+}
+header .welcome-message h1 {
+  font-size: 100px;
+}
+header .welcome-message p {
+  margin: 20px 0;
+  font-size: 40px;
+}
+header .welcome-message button {
+  padding: 5px 50px;
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  font-size: 60px;
+  color: #fff;
+}
+header .welcome-message button:hover {
+  background: #fff;
+  color: green;
+  transition: 1s;
+  cursor: pointer;
 }

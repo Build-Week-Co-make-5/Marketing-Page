@@ -43,6 +43,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+	text-decoration: none;
+}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -76,5 +79,31 @@ header {
 			min-width: 30%;
 			justify-content: space-between;
 		}
+	} // close nav
+	.welcome-message {
+		margin-top: 150px;
+		text-align: center;
+		color: #fff;
+		h1 {
+			font-size: 100px;
+		}
+		p {
+			margin: 20px 0;
+			font-size: 40px;
+		}
+		button {
+			padding: 5px 50px;
+			background: none;
+			border: 3px solid #fff;
+			border-radius: 20px;
+			font-size: 60px;
+			color: #fff;
+		}
+		button:hover {
+			background: #fff;
+			color: green;
+			transition: 1s;
+			cursor: pointer;
+		}
 	}
-}
+} // close header
