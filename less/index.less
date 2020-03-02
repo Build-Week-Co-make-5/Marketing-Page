@@ -57,53 +57,67 @@ html, body {
 }
 
 body {
-	padding: 20px;
-	max-width: 1080px;
-	margin: 0 auto;
-}
-
-header {
-	min-height: 700px;
 	background-image: url(../css/central-park.jpg);
-	background-size: 100%;
-	nav {
-		display: flex;
-		justify-content: space-between;
+	background-size: 1300px 836px;
+	background-repeat: no-repeat;
+	.page-container {
 		padding: 20px;
-		min-height: 60px;
-		.logo-container {
-			min-width: 30%;
-		}
-		.nav-container {
-			display: flex;
-			min-width: 30%;
-			justify-content: space-between;
-		}
-	} // close nav
-	.welcome-message {
-		margin-top: 150px;
-		text-align: center;
-		color: #fff;
-		h1 {
-			font-size: 100px;
-		}
-		p {
-			margin: 20px 0;
-			font-size: 40px;
-		}
-		button {
-			padding: 5px 50px;
-			background: none;
-			border: 3px solid #fff;
-			border-radius: 20px;
-			font-size: 60px;
+		max-width: 1080px;
+		margin: 0 auto;
+		header {
+			min-height: 700px;
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-top:10px;
+				padding-bottom:20px;
+				min-height: 60px;
+				.nav-container {
+					display: flex;
+					width: 300px;
+					justify-content: space-between;
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 20px;
+					font-weight: bold;
+					a {
+						color: #3EBDC2;
+					}
+				}
+			} // close nav
+		} // close header
+		.welcome-message {
+			text-align: center;
 			color: #fff;
+			.logo {
+				width: 300px;
+			}
+			p {
+				margin-bottom: 20px;
+				font-size: 40px;
+			}
+			button {
+				padding: 5px 50px;
+				background: none;
+				border: 3px solid #fff;
+				border-radius: 20px;
+				font-size: 60px;
+				color: #fff;
+				transition: 1s;
+			}
+			button:hover {
+				background: #fff;
+				color: #3EBDC2;
+				transition: 1s;
+				cursor: pointer;
+			}
 		}
-		button:hover {
-			background: #fff;
-			color: green;
-			transition: 1s;
-			cursor: pointer;
-		}
+	} // close page-container
+} // close body
+
+// ------------------------- RESPONSIVE DESIGN ----------------------------------
+@media only screen and (min-width: 1310px) {
+	body {
+		background-size: 100%;
 	}
-} // close header
+}
