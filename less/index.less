@@ -56,7 +56,7 @@ html, body {
 	height: 100%;
 }
 
-body {
+.home-page {
 	background-image: url(../css/central-park.jpg);
 	background-size: 1300px 836px;
 	background-repeat: no-repeat;
@@ -64,6 +64,7 @@ body {
 		padding: 20px;
 		max-width: 1080px;
 		margin: 0 auto;
+		height: 100vh;
 		header {
 			nav {
 				display: flex;
@@ -111,12 +112,22 @@ body {
 				cursor: pointer;
 			}
 		}
+		footer {
+			text-align: center;
+			margin-top: 100px;
+			color: #fff;
+			font-size: 100px;
+		}
 	} // close page-container
 } // close body
 
+.about-page {
+	background: none;
+}
+
 // ------------------------- RESPONSIVE DESIGN ----------------------------------
 @media only screen and (min-width: 1310px) {
-	body {
+	.home-page {
 		background-size: 100%;
 	}
 }

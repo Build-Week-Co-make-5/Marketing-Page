@@ -135,17 +135,18 @@ html,
 body {
   height: 100%;
 }
-body {
+.home-page {
   background-image: url(../css/central-park.jpg);
   background-size: 1300px 836px;
   background-repeat: no-repeat;
 }
-body .page-container {
+.home-page .page-container {
   padding: 20px;
   max-width: 1080px;
   margin: 0 auto;
+  height: 100vh;
 }
-body .page-container header nav {
+.home-page .page-container header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -153,7 +154,7 @@ body .page-container header nav {
   padding-bottom: 20px;
   min-height: 60px;
 }
-body .page-container header nav .nav-container {
+.home-page .page-container header nav .nav-container {
   display: flex;
   width: 300px;
   justify-content: space-between;
@@ -161,21 +162,21 @@ body .page-container header nav .nav-container {
   font-size: 20px;
   font-weight: bold;
 }
-body .page-container header nav .nav-container a {
+.home-page .page-container header nav .nav-container a {
   color: #3EBDC2;
 }
-body .page-container .welcome-message {
+.home-page .page-container .welcome-message {
   text-align: center;
   color: #fff;
 }
-body .page-container .welcome-message .logo {
+.home-page .page-container .welcome-message .logo {
   width: 300px;
 }
-body .page-container .welcome-message p {
+.home-page .page-container .welcome-message p {
   margin-bottom: 20px;
   font-size: 40px;
 }
-body .page-container .welcome-message button {
+.home-page .page-container .welcome-message button {
   padding: 5px 50px;
   background: none;
   border: 3px solid #fff;
@@ -184,14 +185,23 @@ body .page-container .welcome-message button {
   color: #fff;
   transition: 1s;
 }
-body .page-container .welcome-message button:hover {
+.home-page .page-container .welcome-message button:hover {
   background: #fff;
   color: #3EBDC2;
   transition: 1s;
   cursor: pointer;
 }
+.home-page .page-container footer {
+  text-align: center;
+  margin-top: 100px;
+  color: #fff;
+  font-size: 100px;
+}
+.about-page {
+  background: none;
+}
 @media only screen and (min-width: 1310px) {
-  body {
+  .home-page {
     background-size: 100%;
   }
 }
