@@ -135,47 +135,57 @@ html,
 body {
   height: 100%;
 }
-body {
-  background-image: url(../css/central-park.jpg);
-  background-size: 1300px 836px;
+.home-page {
+  background-image: url(../css/central-park2.jpg);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-body .page-container {
-  padding: 20px;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-body .page-container header nav {
+.home-page header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
   min-height: 60px;
+  background: #000;
 }
-body .page-container header nav .nav-container {
+.home-page header nav .nav-container {
+  padding: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
-  width: 300px;
+  min-width: 400px;
   justify-content: space-between;
+  align-content: center;
+  font-size: 50px;
+}
+.home-page header nav .nav-container a {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
+  color: #fff;
+  transition: 1s;
 }
-body .page-container header nav .nav-container a {
-  color: #3EBDC2;
+.home-page header nav .nav-container a:hover {
+  color: gold;
+  transition: 1s;
 }
-body .page-container .welcome-message {
+.home-page .page-container {
+  padding: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 92vh;
+}
+.home-page .page-container .welcome-message {
   text-align: center;
   color: #fff;
 }
-body .page-container .welcome-message .logo {
+.home-page .page-container .welcome-message .logo {
   width: 300px;
 }
-body .page-container .welcome-message p {
+.home-page .page-container .welcome-message p {
   margin-bottom: 20px;
   font-size: 40px;
 }
-body .page-container .welcome-message button {
+.home-page .page-container .welcome-message button {
   padding: 5px 50px;
   background: none;
   border: 3px solid #fff;
@@ -184,14 +194,63 @@ body .page-container .welcome-message button {
   color: #fff;
   transition: 1s;
 }
-body .page-container .welcome-message button:hover {
+.home-page .page-container .welcome-message button:hover {
   background: #fff;
   color: #3EBDC2;
   transition: 1s;
   cursor: pointer;
 }
-@media only screen and (min-width: 1310px) {
-  body {
-    background-size: 100%;
-  }
+.home-page .page-container footer {
+  text-align: center;
+  margin-top: 100px;
+  color: #fff;
+  font-size: 100px;
+}
+.about-page .page-container {
+  height: 100%;
+}
+.about-page .page-container .title-container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-page .page-container .title-container .logo {
+  width: 300px;
+}
+.about-page .page-container .title-container h1 {
+  padding: 10px 20px;
+  font-size: 60px;
+  color: #fff;
+  border-radius: 20px;
+  background: #000;
+  opacity: 0.7;
+}
+.about-page .page-container .profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.about-page .page-container .profiles .profile-container {
+  width: 40%;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background: #DEDEDE;
+  border-radius: 6px;
+}
+.about-page .page-container .profiles .profile-container .thumbnail-container .profile-thumbnail {
+  width: 100%;
+  border-radius: 6px;
+}
+.about-page .page-container .profiles .profile-container .thumbnail-container h3 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.about-page .page-container .profiles .profile-container .profile-details {
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
 }
