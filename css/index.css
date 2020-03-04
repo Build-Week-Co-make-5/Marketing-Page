@@ -136,8 +136,9 @@ body {
   height: 100%;
 }
 .home-page {
-  background-image: url(../css/central-park.jpg);
-  background-size: 1300px 836px;
+  background-image: url(../css/central-park2.jpg);
+  background-size: 1300px 100vh;
+  background-size: 100% 100vh;
   background-repeat: no-repeat;
 }
 .home-page .page-container {
@@ -156,7 +157,7 @@ body {
 }
 .home-page .page-container header nav .nav-container {
   display: flex;
-  width: 300px;
+  width: 200px;
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -197,11 +198,37 @@ body {
   color: #fff;
   font-size: 100px;
 }
-.about-page {
-  background: none;
+.about-page .title-container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-@media only screen and (min-width: 1310px) {
-  .home-page {
-    background-size: 100%;
-  }
+.about-page .title-container .logo {
+  width: 300px;
+}
+.about-page .title-container h1 {
+  padding: 10px 20px;
+  font-size: 60px;
+  color: #fff;
+  border: 4px solid orangered;
+  border-radius: 20px;
+}
+.about-page .profile-container {
+  padding: 20px;
+  background: #DEDEDE;
+  border-radius: 6px;
+}
+.about-page .profile-container .thumbnail-container {
+  width: 200px;
+}
+.about-page .profile-container .thumbnail-container .profile-thumbnail {
+  width: 100%;
+  border-radius: 12px;
+}
+.about-page .profile-container .thumbnail-container h3 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
