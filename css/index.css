@@ -242,7 +242,7 @@ body {
   align-items: center;
 }
 .about-page .page-container .title-container .logo {
-  width: 300px;
+  width: 30%;
 }
 .about-page .page-container .title-container h1 {
   padding: 10px 20px;
@@ -266,7 +266,7 @@ body {
   border-radius: 6px;
 }
 .about-page .page-container .profiles .profile-container .thumbnail-container .profile-thumbnail {
-  max-width: 100%;
+  width: 100%;
   border-radius: 6px;
 }
 .about-page .page-container .profiles .profile-container .thumbnail-container h3 {
@@ -286,4 +286,26 @@ body {
   background: #fff;
   border-radius: 6px;
   justify-content: space-evenly;
+}
+@media only screen and (max-width: 800px) {
+  .about-page .page-container .title-container {
+    flex-direction: column;
+  }
+  .about-page .page-container .title-container .logo {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .about-page .page-container .title-container {
+    flex-direction: column;
+  }
+  .about-page .page-container .title-container .logo {
+    width: 400px;
+  }
+  .about-page .page-container .title-container h1 {
+    font-size: 45px;
+  }
+  .about-page .page-container .profiles .profile-container {
+    width: 100%;
+  }
 }
