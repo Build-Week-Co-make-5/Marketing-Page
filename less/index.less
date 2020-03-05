@@ -247,7 +247,28 @@ html, body {
 
 @media only screen and (max-width: 700px) {
 	.home-page {
-	}
+		.page-container {
+			.issues {
+				padding: 10px;
+				h1 {
+					padding: 10px;
+					font-size: 34px;
+				}
+				.issue-container {
+					.issue-profile {
+						flex-direction: column;
+						.issue-thumbnail {
+							width: 100%;
+							margin-right: 0px;
+						}
+						.issue-details {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	} // close home page
 
 	.about-page {
 		.page-container {
