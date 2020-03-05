@@ -200,8 +200,14 @@ body {
   transition: 1s;
   cursor: pointer;
 }
+.home-page .page-container .pitch {
+  margin: 30px auto;
+  padding: 20px;
+  background: #DEDEDE;
+  border-radius: 10px;
+  font-size: 20px;
+}
 .home-page .page-container .issues {
-  margin-top: 30px;
   padding: 20px;
   background: #DEDEDE;
   border-radius: 6px;
@@ -233,6 +239,7 @@ body {
   width: 63%;
   padding: 10px;
   background: #fff;
+  font-size: 20px;
 }
 .home-page .page-container footer {
   text-align: center;
