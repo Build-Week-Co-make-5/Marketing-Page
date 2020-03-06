@@ -147,6 +147,9 @@ body {
   margin: 0 auto;
   height: 100%;
 }
+#burger {
+  display: none;
+}
 header nav {
   display: flex;
   justify-content: space-between;
@@ -335,9 +338,6 @@ header nav .nav-container a:hover {
   }
 }
 @media only screen and (max-width: 500px) {
-  #nav-bar {
-    display: none;
-  }
   .home-page .page-container #headline {
     font-size: 31px;
   }
