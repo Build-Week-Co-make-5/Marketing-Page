@@ -65,119 +65,126 @@ html, body {
 	margin: 0 auto;
 }
 
-.home-page {
-	background-image: url(../css/central-park2.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	header {
-		nav {
+#bg {
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	background: red;
+}
+
+.page-container {
+	.desktop-size;
+	height: 100%;
+} // close page-container
+
+header {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 60px;
+		background: #000;
+		.nav-container {
+			.desktop-size;
 			display: flex;
+			width: 400px;
 			justify-content: space-between;
-			align-items: center;
-			min-height: 60px;
-			background: #000;
-			.nav-container {
-				.desktop-size;
-				display: flex;
-				min-width: 400px;
-				justify-content: space-between;
-				align-content: center;
-				font-size: 50px;
-				a {
-					font-family: Arial, Helvetica, sans-serif;
-					font-size: 30px;
-					font-weight: bold;
-					color: #fff;
-					transition: 1s;
-				}
-				a:hover {
-					color: #3EBDC2;
-					transition: 1s;
-				}
-			}
-		} // close nav
-	} // close header
-	.page-container {
-		.desktop-size;
-		height: 100%;
-		.welcome-message {
-			text-align: center;
-			color: #fff;
-			.logo {
-				width: 300px;
-			}
-			p {
-				margin-bottom: 20px;
-				font-size: 40px;
-			}
-			button {
-				padding: 5px 50px;
-				background: none;
-				border: 3px solid #fff;
-				border-radius: 20px;
-				font-size: 60px;
+			align-content: center;
+			font-size: 50px;
+			a {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 30px;
+				font-weight: bold;
 				color: #fff;
 				transition: 1s;
 			}
-			button:hover {
-				background: #fff;
+			a:hover {
 				color: #3EBDC2;
 				transition: 1s;
-				cursor: pointer;
 			}
 		}
-		.pitch {
-			margin: 30px auto;
-			padding: 20px;
-			background: @text-bg;
-			border-radius: 10px;
-			font-size: 20px;
+	} // close nav
+} // close header
+
+.home-page {
+	.welcome-message {
+		text-align: center;
+		color: #fff;
+		// .logo {
+		// 	width: 100%;
+		// 	max-width: 300px;
+		// }
+		p {
+			margin-bottom: 20px;
+			font-size: 40px;
 		}
-		.issues {
-			padding: 20px;
-			background: @text-bg;
-			border-radius: 6px;
-			h1 {
-				margin-bottom: 20px;
-				padding: 20px;
-				text-align: center;
-				font-size: 50px;
-				font-weight: bold;
-				color: green;
-				background: #000;
-			}
-			.issue-container {
-				h2 {
-					margin: 10px 0;
-					text-align: center;
-					font-size: 25px;
-					font-weight: bold;
-				}
-				.issue-profile {
-					display: flex;
-					align-content: center;
-					.issue-thumbnail{
-						// width: 100%;
-						width: 35%;
-						margin-right: 20px;
-						// border-radius: 6px;
-					}
-				}
-				.issue-details {
-					width: 63%;
-					padding: 10px;
-					background: #fff;
-					font-size: 20px;
-				}
-			} // close issue-container
-		} // close issues
-		footer {
-			text-align: center;
-			margin-top: 100px;
+		button {
+			padding: 5px 50px;
+			background: none;
+			border: 3px solid #fff;
+			border-radius: 20px;
+			font-size: 60px;
 			color: #fff;
-			font-size: 100px;
+			transition: 1s;
 		}
-	} // close page-container
+		button:hover {
+			background: #fff;
+			color: #3EBDC2;
+			transition: 1s;
+			cursor: pointer;
+		}
+	}
+	.pitch {
+		margin: 30px auto;
+		padding: 20px;
+		background: @text-bg;
+		border-radius: 10px;
+		font-size: 20px;
+	}
+	.issues {
+		padding: 20px;
+		background: @text-bg;
+		border-radius: 6px;
+		h1 {
+			margin-bottom: 20px;
+			padding: 20px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: green;
+			background: #000;
+		}
+		.issue-container {
+			h2 {
+				margin: 10px 0;
+				text-align: center;
+				font-size: 25px;
+				font-weight: bold;
+			}
+			.issue-profile {
+				display: flex;
+				align-content: center;
+				.issue-thumbnail{
+					// width: 100%;
+					width: 35%;
+					margin-right: 20px;
+					// border-radius: 6px;
+				}
+			}
+			.issue-details {
+				width: 63%;
+				padding: 10px;
+				background: #fff;
+				font-size: 20px;
+			}
+		} // close issue-container
+	} // close issues
+	footer {
+		text-align: center;
+		margin-top: 100px;
+		color: #fff;
+		font-size: 100px;
+	}
 } // close home page
 
 .about-page {
@@ -189,13 +196,13 @@ html, body {
 			justify-content: space-evenly;
 			align-items: center;
 			.logo {
-				width: 30%;
+				// width: 30%;
 			}
 			h1 {
 				padding: 10px 20px;
 				font-size: 50px;
 				color: #fff;
-				border-radius: 20px;
+				border-radius: 10px;
 				background: #000;
 				opacity: .7;
 			}
@@ -241,13 +248,19 @@ html, body {
 }
 
 // ------------------------- RESPONSIVE DESIGN ----------------------------------
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1274px) {
+	#bg {
+		width: initial;
+	}
+}
+
+	@media only screen and (max-width: 800px) {
 	.about-page {
 		.page-container {
 			.title-container {
 				flex-direction: column;
 				.logo {
-					width: 400px;
+					// width: 400px;
 				}
 			}
 		}
@@ -278,7 +291,6 @@ html, body {
 			}
 		}
 	} // close home page
-
 	.about-page {
 		.page-container {
 				.title-container {
@@ -293,5 +305,42 @@ html, body {
 				}
 			}
 		}
-	}
+	} // close about
 } // close 700px
+
+@media only screen and (max-width: 500px) {
+	#nav-bar {
+		display: none;
+	}
+	.home-page {
+		.page-container {
+			#headline {
+				font-size: 31px;
+			}
+			#signup {
+				font-size: 30px;
+				padding: 10px 20px;
+			}
+			.issues {
+				h1{
+					font-size: 1.5em;
+				}
+				.issue-container {
+					h2 {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	} // close home
+	.about-page {
+		.page-container {
+			.title-container {
+				h1 {
+					font-size: 1.4em;
+				}
+			}
+			
+		}
+	} // close about
+} // close 500px
