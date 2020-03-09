@@ -56,129 +56,156 @@ html, body {
 	height: 100%;
 }
 
+// -------------- VARIABLES & MIXINS ---------------
+@text-bg: #DEDEDE;
+
 .desktop-size() {
 	padding: 20px;
 	max-width: 1080px;
 	margin: 0 auto;
 }
 
-.home-page {
-	background-image: url(../css/central-park2.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	header {
-		nav {
+#bg {
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	background: red;
+}
+
+.page-container {
+	.desktop-size;
+	height: 100%;
+} // close page-container
+.intro() {
+	margin: 30px auto;
+	padding: 20px;
+	background: @text-bg;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+header {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 60px;
+		background: #000;
+		.nav-container {
+			.desktop-size;
 			display: flex;
+			width: 400px;
 			justify-content: space-between;
-			align-items: center;
-			min-height: 60px;
-			background: #000;
-			.nav-container {
-				.desktop-size;
-				display: flex;
-				min-width: 400px;
-				justify-content: space-between;
-				align-content: center;
-				font-size: 50px;
-				a {
-					font-family: Arial, Helvetica, sans-serif;
-					font-size: 30px;
-					font-weight: bold;
-					color: #fff;
-					transition: 1s;
-				}
-				a:hover {
-					color: #3EBDC2;
-					transition: 1s;
-				}
-			}
-		} // close nav
-	} // close header
-	.page-container {
-		.desktop-size;
-		height: 100%;
-		.welcome-message {
-			text-align: center;
-			color: #fff;
-			.logo {
-				width: 300px;
-			}
-			p {
-				margin-bottom: 20px;
-				font-size: 40px;
-			}
-			button {
-				padding: 5px 50px;
-				background: none;
-				border: 3px solid #fff;
-				border-radius: 20px;
-				font-size: 60px;
+			align-content: center;
+			font-size: 50px;
+			a {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 30px;
+				font-weight: bold;
 				color: #fff;
 				transition: 1s;
 			}
-			button:hover {
-				background: #fff;
+			a:hover {
 				color: #3EBDC2;
 				transition: 1s;
-				cursor: pointer;
 			}
 		}
-		.issue-container {
-			display: flex;
-			margin-top: 30px;
+	} // close nav
+} // close header
+
+.home-page {
+	.welcome-message {
+		text-align: center;
+		color: #fff;
+		p {
+			margin-bottom: 20px;
+			font-size: 40px;
+		}
+		button {
+			padding: 5px 50px;
+			background: none;
+			border: 3px solid #fff;
+			border-radius: 20px;
+			font-size: 60px;
+			color: #fff;
+			transition: 1s;
+		}
+		button:hover {
+			background: #fff;
+			color: #3EBDC2;
+			transition: 1s;
+			cursor: pointer;
+		}
+	}
+	.home-intro {
+		.intro;
+	}
+	.issues {
+		padding: 20px;
+		background: @text-bg;
+		border-radius: 6px;
+		h1 {
+			margin-bottom: 20px;
 			padding: 20px;
-			background: #DEDEDE;
-			border-radius: 6px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: green;
+			background: #000;
+		}
+		.issue-container {
+			h2 {
+				margin: 10px 0;
+				text-align: center;
+				font-size: 25px;
+				font-weight: bold;
+			}
 			.issue-profile {
-				width: 35%;
-				margin-right: 20px;
+				display: flex;
+				align-content: center;
 				.issue-thumbnail{
-					width: 100%;
-					border-radius: 6px;
-				}
-				h2 {
-					margin: 10px 0;
-					text-align: center;
-					font-size: 20px;
-					font-weight: bold;
+					// width: 100%;
+					width: 35%;
+					margin-right: 20px;
+					// border-radius: 6px;
 				}
 			}
 			.issue-details {
 				width: 63%;
 				padding: 10px;
 				background: #fff;
-				border-radius: 6px;
+				font-size: 20px;
 			}
 		} // close issue-container
-		footer {
-			text-align: center;
-			margin-top: 100px;
-			color: #fff;
-			font-size: 100px;
-		}
-	} // close page-container
-} // close body
+	} // close issues
+	footer {
+		text-align: center;
+		margin-top: 100px;
+		color: #fff;
+		font-size: 100px;
+	}
+} // close home page
 
 .about-page {
-	// background: none;
 	.page-container {
 		height: 100%;
 		.title-container {
 			display: flex;
 			justify-content: space-evenly;
 			align-items: center;
-			.logo {
-				// margin-right: 20px;
-				width: 300px;
-			}
+			text-align: center;
 			h1 {
 				padding: 10px 20px;
 				font-size: 50px;
 				color: #fff;
-				border-radius: 20px;
+				border-radius: 10px;
 				background: #000;
 				opacity: .7;
 			}
+		}
+		.about-intro {
+			.intro;
+			width: 90%;
 		}
 		.profiles {
 			display: flex;
@@ -189,7 +216,7 @@ html, body {
 				margin-top: 30px;
 				padding: 20px;
 				text-align: center;
-				background: #DEDEDE;
+				background: @text-bg;
 				border-radius: 6px;
 				.thumbnail-container {
 					.profile-thumbnail{
@@ -199,14 +226,21 @@ html, body {
 					h3 {
 						margin: 10px 0;
 						text-align: center;
-						font-size: 20px;
+						font-size: 25px;
 						font-weight: bold;
+						a {
+							color: inherit;
+						}
+						a:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 				.profile-details {
 					padding: 10px;
 					background: #fff;
 					border-radius: 6px;
+					justify-content: space-evenly;
 				}
 			} // close profile-container
 		} // close profiles
@@ -214,7 +248,107 @@ html, body {
 }
 
 // ------------------------- RESPONSIVE DESIGN ----------------------------------
-@media only screen and (max-width: 900px) {
-	.home-page {
+@media only screen and (max-width: 1274px) {
+	#bg {
+		width: initial;
 	}
 }
+
+	@media only screen and (max-width: 800px) {
+	.about-page {
+		.page-container {
+			.title-container {
+				flex-direction: column;
+				.logo {
+					// width: 400px;
+				}
+			}
+		}
+	}
+} // close 800
+
+@media only screen and (max-width: 700px) {
+	.home-page {
+		.page-container {
+			.issues {
+				padding: 10px;
+				h1 {
+					padding: 10px;
+					font-size: 34px;
+				}
+				.issue-container {
+					.issue-profile {
+						flex-direction: column;
+						.issue-thumbnail {
+							width: 100%;
+							margin-right: 0px;
+						}
+						.issue-details {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	} // close home page
+	.about-page {
+		.page-container {
+				.title-container {
+					flex-direction: column;
+					h1 {
+						font-size: 45px;
+					}
+				}
+			.profiles {
+				.profile-container {
+					width: 100%;
+				}
+			}
+		}
+	} // close about
+} // close 700px
+
+@media only screen and (max-width: 500px) {
+	// #burger {
+	// 	display: block;
+	// 	font-size: 50px;
+	// 	background: #fff;
+	// }
+	// #nav-bar {
+	// 	flex-direction: column;
+	// 	margin: initial;
+	// 	width: initial;
+	// 	display: none;
+	// }
+	.home-page {
+		.page-container {
+			#headline {
+				font-size: 31px;
+			}
+			#signup {
+				font-size: 30px;
+				padding: 10px 20px;
+			}
+			.issues {
+				h1{
+					font-size: 1.5em;
+				}
+				.issue-container {
+					h2 {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	} // close home
+	.about-page {
+		.page-container {
+			.title-container {
+				h1 {
+					font-size: 1.4em;
+				}
+			}
+			
+		}
+	} // close about
+} // close 500px

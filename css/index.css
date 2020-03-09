@@ -135,57 +135,55 @@ html,
 body {
   height: 100%;
 }
-.home-page {
-  background-image: url(../css/central-park2.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+#bg {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  background: red;
 }
-.home-page header nav {
+.page-container {
+  padding: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 100%;
+}
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
   background: #000;
 }
-.home-page header nav .nav-container {
+header nav .nav-container {
   padding: 20px;
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
-  min-width: 400px;
+  width: 400px;
   justify-content: space-between;
   align-content: center;
   font-size: 50px;
 }
-.home-page header nav .nav-container a {
+header nav .nav-container a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: bold;
   color: #fff;
   transition: 1s;
 }
-.home-page header nav .nav-container a:hover {
+header nav .nav-container a:hover {
   color: #3EBDC2;
   transition: 1s;
 }
-.home-page .page-container {
-  padding: 20px;
-  max-width: 1080px;
-  margin: 0 auto;
-  height: 100%;
-}
-.home-page .page-container .welcome-message {
+.home-page .welcome-message {
   text-align: center;
   color: #fff;
 }
-.home-page .page-container .welcome-message .logo {
-  width: 300px;
-}
-.home-page .page-container .welcome-message p {
+.home-page .welcome-message p {
   margin-bottom: 20px;
   font-size: 40px;
 }
-.home-page .page-container .welcome-message button {
+.home-page .welcome-message button {
   padding: 5px 50px;
   background: none;
   border: 3px solid #fff;
@@ -194,40 +192,54 @@ body {
   color: #fff;
   transition: 1s;
 }
-.home-page .page-container .welcome-message button:hover {
+.home-page .welcome-message button:hover {
   background: #fff;
   color: #3EBDC2;
   transition: 1s;
   cursor: pointer;
 }
-.home-page .page-container .issue-container {
-  display: flex;
-  margin-top: 30px;
+.home-page .home-intro {
+  margin: 30px auto;
+  padding: 20px;
+  background: #DEDEDE;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.home-page .issues {
   padding: 20px;
   background: #DEDEDE;
   border-radius: 6px;
 }
-.home-page .page-container .issue-container .issue-profile {
+.home-page .issues h1 {
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: green;
+  background: #000;
+}
+.home-page .issues .issue-container h2 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.home-page .issues .issue-container .issue-profile {
+  display: flex;
+  align-content: center;
+}
+.home-page .issues .issue-container .issue-profile .issue-thumbnail {
   width: 35%;
   margin-right: 20px;
 }
-.home-page .page-container .issue-container .issue-profile .issue-thumbnail {
-  width: 100%;
-  border-radius: 6px;
-}
-.home-page .page-container .issue-container .issue-profile h2 {
-  margin: 10px 0;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-.home-page .page-container .issue-container .issue-details {
+.home-page .issues .issue-container .issue-details {
   width: 63%;
   padding: 10px;
   background: #fff;
-  border-radius: 6px;
+  font-size: 20px;
 }
-.home-page .page-container footer {
+.home-page footer {
   text-align: center;
   margin-top: 100px;
   color: #fff;
@@ -240,17 +252,23 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-.about-page .page-container .title-container .logo {
-  width: 300px;
+  text-align: center;
 }
 .about-page .page-container .title-container h1 {
   padding: 10px 20px;
   font-size: 50px;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #000;
   opacity: 0.7;
+}
+.about-page .page-container .about-intro {
+  margin: 30px auto;
+  padding: 20px;
+  background: #DEDEDE;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 90%;
 }
 .about-page .page-container .profiles {
   display: flex;
@@ -272,11 +290,74 @@ body {
 .about-page .page-container .profiles .profile-container .thumbnail-container h3 {
   margin: 10px 0;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+}
+.about-page .page-container .profiles .profile-container .thumbnail-container h3 a {
+  color: inherit;
+}
+.about-page .page-container .profiles .profile-container .thumbnail-container h3 a:hover {
+  text-decoration: underline;
 }
 .about-page .page-container .profiles .profile-container .profile-details {
   padding: 10px;
   background: #fff;
   border-radius: 6px;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 1274px) {
+  #bg {
+    width: initial;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about-page .page-container .title-container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .home-page .page-container .issues {
+    padding: 10px;
+  }
+  .home-page .page-container .issues h1 {
+    padding: 10px;
+    font-size: 34px;
+  }
+  .home-page .page-container .issues .issue-container .issue-profile {
+    flex-direction: column;
+  }
+  .home-page .page-container .issues .issue-container .issue-profile .issue-thumbnail {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .home-page .page-container .issues .issue-container .issue-profile .issue-details {
+    width: 100%;
+  }
+  .about-page .page-container .title-container {
+    flex-direction: column;
+  }
+  .about-page .page-container .title-container h1 {
+    font-size: 45px;
+  }
+  .about-page .page-container .profiles .profile-container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .home-page .page-container #headline {
+    font-size: 31px;
+  }
+  .home-page .page-container #signup {
+    font-size: 30px;
+    padding: 10px 20px;
+  }
+  .home-page .page-container .issues h1 {
+    font-size: 1.5em;
+  }
+  .home-page .page-container .issues .issue-container h2 {
+    font-size: 1.2em;
+  }
+  .about-page .page-container .title-container h1 {
+    font-size: 1.4em;
+  }
 }

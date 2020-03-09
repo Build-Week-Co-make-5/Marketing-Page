@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-make</title>
+  <link href="css/font-awesome.min.css"  rel="stylesheet">
+  <link href="css/index.css"  rel="stylesheet">
+</head>
+<body>
+  <div class="home-page">
+    <div id="header"></div>
+    <div class="page-container">
+      <div class="welcome-message">
+        <img class="logo" src="css/co-make_logo.png" />
+        <p id="headline">Where you can make a difference.</p>
+        <a href="#"><button id="signup">Signup</button></a>
+      </div>
+
+      <section class="home-intro">
+        <p>Ever get frustrated that a problem in your town or neighborhood goes ages without being resolved? You might have road issues (potholes, dangerous areas..), overgrown plant issues, or anything else that makes living where you live a little less pleasant. With Co-make you can make your voice heard on the issues you would like to see resolved in your community. 3 simple steps:</p>
+      </section>
+
+      <section class="issues">
+        <h1>Neighborhood Projects</h1>
+        <article class="issue-container">
+          <h2>Massive Pot Hole</h2>
+          <div class="issue-profile">
+            <img class="issue-thumbnail" src="css/pot-hole.jpg" alt="pot hole" title="pot hole" />
+            <p class="issue-details">A massive pot hole has been reported 23rd street near the cross street Park Ave. In the situation where you have to take this street be officials arrive, please becareful and exercise extreme caution as we do not want you or your vehicle to fall inside. Please upvote this issue so that it can be taken care of as soona s possible.</p>
+          </div>
+        </article>
+      </section>
+
+      <div id="footer"></div>
+  
+  		<script src="scripts/jquery-2.2.0.js" type=""></script>
+  		<script src="scripts/jquery-2.2.0.min.js" type="text/javascript"></script>
+  
+  		<script>
+  			$(document).ready(function(){
+  				$("#header").load("header.html");
+  				$("#footer").load("footer.html");
+  			});
+  		</script>
+    </div> <!-- close page-container -->
+  </div>
+</body>
+</html>
