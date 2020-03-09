@@ -147,9 +147,6 @@ body {
   margin: 0 auto;
   height: 100%;
 }
-#burger {
-  display: none;
-}
 header nav {
   display: flex;
   justify-content: space-between;
@@ -201,7 +198,7 @@ header nav .nav-container a:hover {
   transition: 1s;
   cursor: pointer;
 }
-.home-page .pitch {
+.home-page .home-intro {
   margin: 30px auto;
   padding: 20px;
   background: #DEDEDE;
@@ -255,6 +252,7 @@ header nav .nav-container a:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 .about-page .page-container .title-container h1 {
   padding: 10px 20px;
@@ -263,6 +261,14 @@ header nav .nav-container a:hover {
   border-radius: 10px;
   background: #000;
   opacity: 0.7;
+}
+.about-page .page-container .about-intro {
+  margin: 30px auto;
+  padding: 20px;
+  background: #DEDEDE;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 90%;
 }
 .about-page .page-container .profiles {
   display: flex;

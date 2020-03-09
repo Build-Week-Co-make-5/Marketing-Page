@@ -76,9 +76,12 @@ html, body {
 	.desktop-size;
 	height: 100%;
 } // close page-container
-
-#burger {
-	display: none;
+.intro() {
+	margin: 30px auto;
+	padding: 20px;
+	background: @text-bg;
+	border-radius: 10px;
+	font-size: 20px;
 }
 
 header {
@@ -114,10 +117,6 @@ header {
 	.welcome-message {
 		text-align: center;
 		color: #fff;
-		// .logo {
-		// 	width: 100%;
-		// 	max-width: 300px;
-		// }
 		p {
 			margin-bottom: 20px;
 			font-size: 40px;
@@ -138,12 +137,8 @@ header {
 			cursor: pointer;
 		}
 	}
-	.pitch {
-		margin: 30px auto;
-		padding: 20px;
-		background: @text-bg;
-		border-radius: 10px;
-		font-size: 20px;
+	.home-intro {
+		.intro;
 	}
 	.issues {
 		padding: 20px;
@@ -192,16 +187,13 @@ header {
 } // close home page
 
 .about-page {
-	// background: none;
 	.page-container {
 		height: 100%;
 		.title-container {
 			display: flex;
 			justify-content: space-evenly;
 			align-items: center;
-			.logo {
-				// width: 30%;
-			}
+			text-align: center;
 			h1 {
 				padding: 10px 20px;
 				font-size: 50px;
@@ -210,6 +202,10 @@ header {
 				background: #000;
 				opacity: .7;
 			}
+		}
+		.about-intro {
+			.intro;
+			width: 90%;
 		}
 		.profiles {
 			display: flex;
